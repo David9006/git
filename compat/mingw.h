@@ -175,7 +175,6 @@ pid_t waitpid(pid_t pid, int *status, int options);
 int mingw_kill(pid_t pid, int sig);
 
 #ifndef NO_OPENSSL
-#include <openssl/ssl.h>
 static inline int mingw_SSL_set_fd(SSL *ssl, int fd)
 {
 	return SSL_set_fd(ssl, _get_osfhandle(fd));
